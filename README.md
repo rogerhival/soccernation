@@ -1,2 +1,0 @@
-# soccernation
-Soccer nation organizer
