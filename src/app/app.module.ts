@@ -1,16 +1,15 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule, IonicPageModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import { Api } from '../providers';
-import { User } from '../providers';
-import { LoginPageModule } from '../pages/login/login.module';
+/* Providers */
+import { Api, User, Competition } from '../providers';
 
 @NgModule({
   declarations: [
@@ -20,8 +19,7 @@ import { LoginPageModule } from '../pages/login/login.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
-    LoginPageModule
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -31,6 +29,7 @@ import { LoginPageModule } from '../pages/login/login.module';
   providers: [
     Api,
     User,
+    Competition,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
