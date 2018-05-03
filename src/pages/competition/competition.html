@@ -1,5 +1,9 @@
-<div
-     *ngFor="let competition of competitions">
-  {{competition.name}}
-  <p class="card-text">{{competition.typeOfCompetition}}</p>
+<div class="content" *ngFor="let competition of competitions">
+ <div class="title">
+    Competitions
+ </div>
+ <div class="row">
+   <div class="col-xs-9 col-md-7">{{competition.name}}</div>
+   <div class="col-xs-3 col-md-5">{{competition.typeOfCompetition}}</div>
+ </div>
 </div>
