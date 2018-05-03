@@ -1,0 +1,48 @@
+<div *ngFor="let team of teams">
+  {{team.name}}
+</div>
+<br/>
+<div>
+  <form ng-submit="submit()" name="soccerForm" novalidate>
+    <table border="0">
+        <tr>
+            <td>Competition: </td>
+            <td>
+              <select>
+                <option *ngFor="let comp of competitions" value= {{comp.id}}>
+                  {{comp.name}}
+                </option>
+              </select>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>Team name:</td>
+            <td>
+                <input name="teamName" type="text" ng-model="teamName" required>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Status:</td>
+            <td>
+                <select name="teamStatus" id="teamStatus" ng-model="teamStatus">
+                    <option value="Active" selected>Active</option>
+                    <option value="Inactive">Inactive</option>
+                    <option value="Blocked">Blocked</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" id="submit" value="Submit" />
+                <input type="button" class="button_active" onclick="location.href='/index.html';" value="Back" />
+            </td>
+        </tr>
+
+    </table>
+</form>
+</div>

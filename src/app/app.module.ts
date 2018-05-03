@@ -9,7 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 /* Providers */
-import { Api, User, Competition } from '../providers';
+import { Api, User, Competition, Team } from '../providers';
 
 @NgModule({
   declarations: [
@@ -30,6 +30,7 @@ import { Api, User, Competition } from '../providers';
     Api,
     User,
     Competition,
+    Team,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

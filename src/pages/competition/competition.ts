@@ -18,10 +18,10 @@ export class CompetitionPage {
     constructor(public navCtrl: NavController,
       public competition: Competition,
       public toastCtrl: ToastController) {
-        this._getCompetitions();
+        this.getCompetitions();
     }
 
-    _getCompetitions() {
+    getCompetitions() {
       this.competition.getCompetitions().subscribe((resp) => {
         console.log(resp);
         this.competitions = resp;
